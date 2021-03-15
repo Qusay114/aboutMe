@@ -1,0 +1,17 @@
+body
+{
+    background-color: #e7e6e1;
+}
+
+header h1
+{
+    text-align: center;
+    color:#314e52;
+}
+
+main #info 
+{
+    text-align: center;
+    font-size: 25px;
+    color: #f2a154;
+}
