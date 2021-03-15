@@ -20,7 +20,7 @@ if(q2==='yes' || q2==='y')
 }
 else
 {
-  alert('you are right , I\'m not that old , I\'m 23 old , still young and looking for a girl to marry ,haha I am just joking I do not want to kill my self early :) ');
+  alert('you are right , I\'m not that old , I\'m 23 old , still young and looking for a girl to marry ,haha I am just joking I do not want to die early :) ');
   console.log('you are right , I\'m not that old , I\'m 23 old , still young and looking for a girl to marry ,haha I am just joking I do\'nt want to die early :) ');
 }
 
