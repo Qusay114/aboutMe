@@ -1,5 +1,7 @@
 'use strict';
 
+alert('Hello there , we are gonna play about me guessing game ,  are you ready ? ');
+
 let q1 = prompt('Is my name Ahmad').toLowerCase();
 if(q1==='yes' || q1==='y')
 {
