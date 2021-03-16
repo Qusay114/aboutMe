@@ -1,6 +1,12 @@
 'use strict';
 
-alert('Hello there , we are gonna play about me guessing game ,  are you ready ? ');
+
+alert('Hello there , we are gonna play about me guessing game , answer with yes/no or y/n ,  are you ready ? ');
+
+let name1 = prompt('What is your name ?');
+alert('that is really a beautiful name, nice to meet you ' + name1 +' ^_^');
+
+let countCorrect = 0 ;
 
 let q1 = prompt('Is my name Ahmad').toLowerCase();
 if(q1==='yes' || q1==='y')
@@ -11,6 +17,7 @@ if(q1==='yes' || q1==='y')
 else if (q1==='no' || q1==='n')
 {
   alert('yeah that is correct , that is not my name , My name is Qusay , it is a nice name right ? ^_^');
+  countCorrect++;
   console.log('yeah that is correct , that is not my name , My name is Qusay , it is a nice name right ? ^_^');
 }
 
@@ -28,6 +35,7 @@ if(q2==='yes' || q2==='y')
 else if (q2==='no' || q2==='n')
 {
   alert('you are right , I\'m not that old , I\'m 23 old , still young  ');
+  countCorrect++;
   console.log('you are right , I\'m not that old , I\'m 23 old , still young  ');
 }
 
@@ -40,6 +48,7 @@ let q3 = prompt('Am I an web developer ?').toLowerCase();
 if(q3==='yes' || q3==='y')
 {
   alert('yeah that\'is right , and I hope to become one of the greatest programmers ');
+  countCorrect++;
   console.log('yeah that\'is right , and I hope to become one of the greatest programmers ');
 }
 else if (q3==='no' || q3==='n')
@@ -57,6 +66,7 @@ let q4 = prompt('Do I live in jordan ?').toLowerCase();
 if(q4==='yes' || q4==='y')
 {
   alert('yeah that\'is right , fortunetly I live in this great country');
+  countCorrect++;
   console.log('yeah that\'is right , fortunetly I live in this great country');
 }
 else if (q4==='no' || q4==='n')
@@ -74,6 +84,7 @@ let q5 = prompt('Do you think I prefer online classes ? ').toLowerCase();
 if(q5==='yes' || q5==='y')
 {
   alert('yes that\'s right I do prefer them because it saves me time and effort of transporting');
+  countCorrect++;
   console.log('yes that\'s right I do prefer them because it saves me time and effort of transporting');
 }
 else if(q5==='no' || q5==='n')
@@ -87,9 +98,52 @@ else
   alert('answer the question right next time ok ? it doesn\'t need you to be a genius to answer');
 }
 
+let q6 = prompt('How many pla pla ?');
+for(let i =0 ; i<3 ; i++ )
+{
+  if(q6==5)
+  {
+    alert('great you guessed correct');
+    countCorrect++;
+    break;
+  }
+  else if(q6 < 0)
+  {
+    q6 = prompt('Wrong! ,it\'s too low , come on try again');
+  }
+  else if(q6)
+  {
+    q6 = prompt('Wrong! ,it\'s too high , come on try again');
+  }
+  else 
+  {
+    prompt('please , don\'t leave it empty , try again');
+  }
 
-let name1 = prompt('What is your name by the way ?');
+}
 
-alert('that is really a beautiful name, nice to meet you ' + name1 +' ^_^');
+let triesLeft = 6;
+let q7 = prompt('What is My favourite movie ?')
+if(q7)
+{
+  q7.toLowerCase();
+}
+let favMovies = ['interstellar', 'inception', 'idiot 3', 'parasite']; 
+for(let j = 0 ; j < 5 ; j++)
+{
+  if(favMovies.indexOf(q7) === -1 )
+  {
+    triesLeft--;
+    q7 = prompt('Wrong! , try again you still have ' + triesLeft + ' left');
+  }
+  else
+  {
+    alert('Great , you guessed right ');
+    countCorrect++;
+    break;
+  }
+}
 
-document.getElementById('info').innerHTML = 'Hello Everyone, I\'m Qusay Al-Amarat from Jordan , I\'m Electrical Engineer and soon will be a full stack web developer inchallah, I have graduated from The University of Jordan in 2020 , my dream is to become a great programmer ' ;
+alert('here is My favourite movies : ' + favMovies);
+
+document.getElementById('score').innerHTML = 'Hello ' + name1 + ' you have answered ' + countCorrect + ' of 7 questions and down you can find all info about me , it was a pleasure to play with you';
