@@ -96,7 +96,7 @@ else
 let q6 = Number(prompt('How old am I ?'));
 for(let i =0 ; i<3 ; i++ )
 {
-  
+
   if(q6===23)
   {
     alert('great you guessed correct');
@@ -112,7 +112,7 @@ for(let i =0 ; i<3 ; i++ )
   {
     q6 = Number(prompt('Wrong! ,it\'s too high , come on try again'));
   }
-  else 
+  else
   {
     q6 = Number(prompt('please , don\'t leave it empty , try again'));
   }
@@ -121,7 +121,7 @@ for(let i =0 ; i<3 ; i++ )
 
 let triesLeft = 6;
 let q7 = prompt('What is My favourite movie ?').toLowerCase();
-let favMovies = ['interstellar', 'inception', 'idiot 3', 'parasite']; 
+let favMovies = ['interstellar', 'inception', 'idiot 3', 'parasite'];
 for(let j = 0 ; j < 5 ; j++)
 {
   if(favMovies.indexOf(q7) === -1 )
