@@ -98,16 +98,17 @@ else
   alert('answer the question right next time ok ? it doesn\'t need you to be a genius to answer');
 }
 
-let q6 = prompt('How many pla pla ?');
+let q6 = prompt('How old am I ?');
 for(let i =0 ; i<3 ; i++ )
 {
-  if(q6==5)
+  if(q6==23)
   {
     alert('great you guessed correct');
+    console.log('Great , you guessed right ');
     countCorrect++;
     break;
   }
-  else if(q6 < 0)
+  else if(q6 < 23)
   {
     q6 = prompt('Wrong! ,it\'s too low , come on try again');
   }
@@ -139,6 +140,7 @@ for(let j = 0 ; j < 5 ; j++)
   else
   {
     alert('Great , you guessed right ');
+    console.log('Great , you guessed right ');
     countCorrect++;
     break;
   }
