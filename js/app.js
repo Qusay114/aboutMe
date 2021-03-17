@@ -99,6 +99,10 @@ else
 }
 
 let q6 = prompt('How old am I ?');
+if(q6)
+{
+  q6 = Number(q6);
+}
 for(let i =0 ; i<3 ; i++ )
 {
   if(q6==23)
