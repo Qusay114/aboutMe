@@ -20,10 +20,9 @@ else if (q1==='no' || q1==='n')
   countCorrect++;
   console.log('yeah that is correct , that is not my name , My name is Qusay , it is a nice name right ? ^_^');
 }
-
 else
 {
-  alert('answer the question right next time ok ? it doesn\'t need you to be a genius to answer');
+  alert('Please answer with yes/no or y/n ');
 }
 
 let q2 = prompt('Am I 40 old ?').toLowerCase();
@@ -38,10 +37,9 @@ else if (q2==='no' || q2==='n')
   countCorrect++;
   console.log('you are right , I\'m not that old , I\'m 23 old , still young  ');
 }
-
 else
 {
-  alert('answer the question right next time ok ? it doesn\'t need you to be a genius to answer');
+  alert('Please answer with yes/no or y/n ');
 }
 
 let q3 = prompt('Am I an web developer ?').toLowerCase();
@@ -56,10 +54,9 @@ else if (q3==='no' || q3==='n')
   alert('no , come on be realistic you like my work , who does not :) ');
   console.log('no , come on be realistic you like my work , who does not :) ');
 }
-
 else
 {
-  alert('answer the question right next time ok ? it doesn\'t need you to be a genius to answer');
+  alert('Please answer with yes/no or y/n ');
 }
 
 let q4 = prompt('Do I live in jordan ?').toLowerCase();
@@ -74,10 +71,9 @@ else if (q4==='no' || q4==='n')
   alert('you are wrong , I live in jordan ');
   console.log('you are wrong , I live in jordan ');
 }
-
 else
 {
-  alert('answer the question right next time ok ? it doesn\'t need you to be a genius to answer');
+  alert('Please answer with yes/no or y/n ');
 }
 
 let q5 = prompt('Do you think I prefer online classes ? ').toLowerCase();
@@ -92,20 +88,16 @@ else if(q5==='no' || q5==='n')
   alert('no that\'s wrong . I do prefer online classes');
   console.log('no that\'s wrong . I do prefer online classes');
 }
-
 else
 {
-  alert('answer the question right next time ok ? it doesn\'t need you to be a genius to answer');
+  alert('Please answer with yes/no or y/n ');
 }
 
-let q6 = prompt('How old am I ?');
-if(q6)
-{
-  q6 = Number(q6);
-}
+let q6 = Number(prompt('How old am I ?'));
 for(let i =0 ; i<3 ; i++ )
 {
-  if(q6==23)
+  
+  if(q6===23)
   {
     alert('great you guessed correct');
     console.log('Great , you guessed right ');
@@ -114,32 +106,28 @@ for(let i =0 ; i<3 ; i++ )
   }
   else if(q6 < 23)
   {
-    q6 = prompt('Wrong! ,it\'s too low , come on try again');
+    q6 = Number(prompt('Wrong! ,it\'s too low , come on try again'));
   }
-  else if(q6)
+  else if(q6 > 23)
   {
-    q6 = prompt('Wrong! ,it\'s too high , come on try again');
+    q6 = Number(prompt('Wrong! ,it\'s too high , come on try again'));
   }
   else 
   {
-    prompt('please , don\'t leave it empty , try again');
+    q6 = Number(prompt('please , don\'t leave it empty , try again'));
   }
 
 }
 
 let triesLeft = 6;
-let q7 = prompt('What is My favourite movie ?')
-if(q7)
-{
-  q7.toLowerCase();
-}
+let q7 = prompt('What is My favourite movie ?').toLowerCase();
 let favMovies = ['interstellar', 'inception', 'idiot 3', 'parasite']; 
 for(let j = 0 ; j < 5 ; j++)
 {
   if(favMovies.indexOf(q7) === -1 )
   {
     triesLeft--;
-    q7 = prompt('Wrong! , try again you still have ' + triesLeft + ' left');
+    q7 = prompt('Wrong! , try again you still have ' + triesLeft + ' left').toLowerCase();
   }
   else
   {
@@ -152,4 +140,4 @@ for(let j = 0 ; j < 5 ; j++)
 
 alert('here is My favourite movies : ' + favMovies);
 
-document.getElementById('score').innerHTML = 'Hello ' + name1 + ' you have answered ' + countCorrect + ' of 7 questions and down you can find all info about me , it was a pleasure to play with you';
+document.getElementById('score').innerHTML ='Hello ' + name1 + ' you have answered ' + countCorrect + ' of 7 questions and down you can find all info about me , it was a pleasure to play with you' ;
