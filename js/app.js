@@ -1,5 +1,6 @@
 'use strict';
 
+document.getElementById('main').style.display = 'none';
 
 alert('Hello there , we are gonna play about me guessing game , answer with yes/no or y/n ,  are you ready ? ');
 
@@ -13,14 +14,14 @@ function question1(){
   let q1 = prompt('Is my name Ahmad').toLowerCase();
   if(q1==='yes' || q1==='y')
   {
-    alert('Noooo  ,That is not my name , my name is Qusay, it is a nice name right ? ^_^');
-    console.log('Noooo  ,That is not my name , my name is Qusay, it is a nice name right ? ^_^');
+    alert('Noooo  ,That is not my name , my name is Qusay, it is nice name right ? ^_^');
+    console.log('Noooo  ,That is not my name , my name is Qusay, it is nice name right ? ^_^');
   }
   else if (q1==='no' || q1==='n')
   {
-    alert('yeah that is correct , that is not my name , My name is Qusay , it is a nice name right ? ^_^');
+    alert('yeah that is correct , that is not my name , My name is Qusay , it is nice name right ? ^_^');
     countCorrect++;
-    console.log('yeah that is correct , that is not my name , My name is Qusay , it is a nice name right ? ^_^');
+    console.log('yeah that is correct , that is not my name , My name is Qusay , it is nice name right ? ^_^');
   }
   else
   {
@@ -28,6 +29,7 @@ function question1(){
   }
 }
 /** End question 1 */
+
 /** start question number two */
 
 function question2(){
@@ -49,14 +51,15 @@ function question2(){
   }
 }
 /** End question 2 */
+
 /** start question number three */
 function question3(){
   let q3 = prompt('Am I an web developer ?').toLowerCase();
   if(q3==='yes' || q3==='y')
   {
-    alert('yeah that\'is right , and I hope to become one of the greatest programmers ');
+    alert('yeah that\'s right , and I hope to become one of the greatest programmers ');
     countCorrect++;
-    console.log('yeah that\'is right , and I hope to become one of the greatest programmers ');
+    console.log('yeah that\'s right , and I hope to become one of the greatest programmers ');
   }
   else if (q3==='no' || q3==='n')
   {
@@ -69,6 +72,7 @@ function question3(){
   }
 }
 /** End question 3 */
+
 /** start question number four */
 function question4(){
   let q4 = prompt('Do I live in jordan ?').toLowerCase();
@@ -113,22 +117,22 @@ function question5(){
 
 /** start question number six */
 function question6(){
-  let q6 = Number(prompt('How old am I ?'));
+  let q6 = Number(prompt('Guess a number between 1-10 ( hint: it\'s related to : flower , google , outlook )'));
   for(let i =0 ; i<3 ; i++ )
   {
 
-    if(q6===23)
+    if(q6===6)
     {
-      alert('great you guessed correct');
-      console.log('Great , you guessed right ');
+      alert('Great , you guessed right , and it was about the o letter in flower , google , outlook');
+      console.log('Great , you guessed right , and it was about the o letter in flower , google , outlook');
       countCorrect++;
       break;
     }
-    else if(q6 < 23)
+    else if(q6 < 6)
     {
       q6 = Number(prompt('Wrong! ,it\'s too low , come on try again'));
     }
-    else if(q6 > 23)
+    else if(q6 > 6)
     {
       q6 = Number(prompt('Wrong! ,it\'s too high , come on try again'));
     }
@@ -137,6 +141,10 @@ function question6(){
       q6 = Number(prompt('please , don\'t leave it empty , try again'));
     }
 
+  }
+  if(q6 !== 6)
+  {
+    alert('the answer is 6 , and it related to o letter in flower , google , outlook');
   }
 }
 /** End question 6 */
@@ -166,7 +174,8 @@ function question7(){
 }
 
 /** End question 7 */
-/*start invoke the functions */
+
+/*start to invoke the functions */
 question1();
 question2();
 question3();
@@ -174,4 +183,7 @@ question4();
 question5();
 question6();
 question7();
+
 document.getElementById('score').innerHTML ='Hello ' + name1 + ' you have answered ' + countCorrect + ' of 7 questions and down you can find all info about me , it was a pleasure to play with you' ;
+
+document.getElementById('main').style.display = 'block' ;
